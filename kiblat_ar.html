@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.min.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden">
+    <a-scene embedded arjs>
+      <a-camera gps-camera rotation-reader></a-camera>
+
+      <!-- Titik Ka'bah sebagai arah -->
+      <a-box 
+        position="0 0 0" 
+        gps-entity-place="latitude: 21.4225; longitude: 39.8262" 
+        color="red">
+        <a-text value="Ka'bah" color="white" position="0 2 0"></a-text>
+      </a-box>
+    </a-scene>
+  </body>
+</html>
